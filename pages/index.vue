@@ -30,7 +30,7 @@ export default {
 
   },
   methods: {
-       checkForm() {
+       checkForm(e) {
         if (this.login && this.password) {
           this.$store.dispatch(
             'common/auth', {
@@ -50,7 +50,7 @@ export default {
           if (!this.login) this.errors.push('Введите Логин');
           if(!this.password) this.errors.push('Введите пароль')
 
-           // e.preventDefault();
+           e.preventDefault();
 
     }
   }
